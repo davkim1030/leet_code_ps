@@ -1,9 +1,15 @@
 from unittest import TestCase
 
 from problems.add_two_numbers import ListNode, Solution
+from tests import PSTestCase
 
 
-class TestCases(TestCase):
+class TestCases(TestCase, PSTestCase):
+    def setUp(self):
+        self.solution_object = Solution()
+    def solution(self, *args, **kwargs) -> any:
+        return self.solution_object.addTwoNumbers(*args, **kwargs)
+
     @staticmethod
     def _int_to_node(val: int) -> ListNode:
         if val == 0:
@@ -38,7 +44,7 @@ class TestCases(TestCase):
         l2 = self._int_to_node(465)
 
         # When
-        result = Solution().addTwoNumbers(l1, l2)
+        result = self.solution(l1, l2)
 
         # Then: 807
         self.assertTrue(self._compare(result, self._int_to_node(807)))
@@ -49,7 +55,7 @@ class TestCases(TestCase):
         l2 = ListNode(0)
 
         # When
-        result = Solution().addTwoNumbers(l1, l2)
+        result = self.solution(l1, l2)
 
         # Then: 0
         self.assertTrue(self._compare(result, ListNode(0)))
@@ -60,7 +66,7 @@ class TestCases(TestCase):
         l2 = self._int_to_node(9_999)
 
         # When
-        result = Solution().addTwoNumbers(l1, l2)
+        result = self.solution(l1, l2)
 
         # Then: 10,009,998
         self.assertTrue(self._compare(result, self._int_to_node(10_009_998)))
@@ -71,7 +77,7 @@ class TestCases(TestCase):
         l2 = ListNode(1)
 
         # When
-        result = Solution().addTwoNumbers(l1, l2)
+        result = self.solution(l1, l2)
 
         # Then: 1
         self.assertTrue(self._compare(result, ListNode(1)))
