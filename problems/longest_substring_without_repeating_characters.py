@@ -2,11 +2,7 @@
 # 3. Longest Substring Without Repeating Characters
 
 class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def lengthOfLongestSubstring(self, s: str) -> int:
         max_len = 0
         start, end = 0, 0
         hash_map = {}

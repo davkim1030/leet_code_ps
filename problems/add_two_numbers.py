@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/add-two-numbers
 # 2. Add Two Numbers
+from typing import Optional
+
 
 # Definition for singly-linked list.
 class ListNode(object):
@@ -9,19 +11,18 @@ class ListNode(object):
 
 
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         result = ListNode()
         next_node = result
 
         carry = 0
         has_next = True
         while has_next:
-            tmp = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry
+            tmp = (
+                    (l1.val if l1 else 0) +
+                    (l2.val if l2 else 0) +
+                    carry
+            )
             carry, result_value = divmod(tmp, 10)
             next_node.val = result_value
 
@@ -34,3 +35,4 @@ class Solution(object):
                 next_node = next_node.next
 
         return result
+
