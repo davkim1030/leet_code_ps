@@ -19,7 +19,7 @@ class TestLongestSubstringWithoutRepeatingCharacters(TestCase, PSTestCase):
         result = self.solution(s)
 
         # Then
-        self.assertEquals(result, 3)
+        self.assertEqual(result, 3)
 
     def test2(self):
         # Given
@@ -29,7 +29,7 @@ class TestLongestSubstringWithoutRepeatingCharacters(TestCase, PSTestCase):
         result = self.solution(s)
 
         # Then
-        self.assertEquals(result, 1)
+        self.assertEqual(result, 1)
 
     def test3(self):
         # Given
@@ -39,7 +39,7 @@ class TestLongestSubstringWithoutRepeatingCharacters(TestCase, PSTestCase):
         result = self.solution(s)
 
         # Then
-        self.assertEquals(result, 3)
+        self.assertEqual(result, 3)
 
     def test4(self):
         # Given
@@ -49,5 +49,5 @@ class TestLongestSubstringWithoutRepeatingCharacters(TestCase, PSTestCase):
         result = self.solution(s)
 
         # Then
-        self.assertEquals(result, 2)
+        self.assertEqual(result, 2)
 
