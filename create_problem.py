@@ -80,7 +80,7 @@ def create_problem_file(title: str, number: str, code: str) -> str:
     
     # 필요한 import 문 추가
     if 'List' in code:
-        code = 'from typing import List\n\n' + code
+        code = 'from typing import List\n\n\n' + code
     
     content = f'''# https://leetcode.com/problems/{file_name}/
 # {number}. {title}
