@@ -13,4 +13,4 @@ from problems.coin_change import Solution
 def test(coins, amount, expected):
     actual = Solution().coinChange(coins, amount)
 
-    assert expected == actual
+    assert actual == expected

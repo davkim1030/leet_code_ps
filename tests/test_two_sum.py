@@ -14,4 +14,4 @@ from problems.two_sum import Solution
 def test(nums, target, expected):
     actual = Solution().twoSum(nums, target)
 
-    assert expected == actual
+    assert actual == expected

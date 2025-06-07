@@ -41,4 +41,4 @@ def test(tree, expected):
 
     actual = Solution().averageOfLevels(tree)
 
-    assert expected == actual
+    assert actual == expected

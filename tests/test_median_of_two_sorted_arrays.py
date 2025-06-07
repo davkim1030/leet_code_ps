@@ -16,4 +16,4 @@ from problems.median_of_two_sorted_arrays import Solution
 def test(nums1, nums2, expected: float):
     actual = Solution().findMedianSortedArrays(nums1, nums2)
 
-    assert expected == actual
+    assert actual == expected

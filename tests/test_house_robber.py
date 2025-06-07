@@ -13,4 +13,4 @@ from problems.house_robber import Solution
 def test(nums, expected):
     actual = Solution().rob(nums)
 
-    assert expected == actual
+    assert actual == expected

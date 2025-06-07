@@ -12,4 +12,4 @@ from problems.climbing_stairs import Solution
 def test(n, expected):
     actual = Solution().climbStairs(n)
 
-    assert expected == actual
+    assert actual == expected

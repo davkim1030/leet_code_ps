@@ -13,4 +13,4 @@ from problems.minimum_size_subarray_sum import Solution
 def test(target, nums, expected):
     actual = Solution().minSubArrayLen(target, nums)
 
-    assert expected == actual
+    assert actual == expected

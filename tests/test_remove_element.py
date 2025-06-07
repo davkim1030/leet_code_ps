@@ -13,4 +13,4 @@ def test(nums, val, expected):
     result = Solution().removeElement(nums, val)
     actual = nums[:result]
 
-    assert expected == actual
+    assert actual == expected

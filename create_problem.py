@@ -113,7 +113,7 @@ from problems.{file_name} import Solution
 def test({', '.join(param_names + ['expected'])}):
     actual = Solution().{method_name}({', '.join(param_names)})
 
-    assert expected == actual
+    assert actual == expected
 '''
     
     test_file_path.write_text(content)
